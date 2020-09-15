@@ -13,7 +13,9 @@
         * [Maintainer](#maintainer)
     * [Architecture Committee](#architecture-committee)
 * [Vendoring code](#vendoring-code)
-* [Vulnerability Disclosure](#vulnerability-disclosure)
+* [Vulnerability Handling](#vulnerability-handling)
+    * [Reporting Vulnerabilities](#reporting-vulnerabilities)
+    * [Vulnerability Disclosure Process](#vulnerability-disclosure-process)
 * [Week in Review template](#week-in-review-template)
 
 # About Kata Containers
@@ -26,7 +28,7 @@ Kata Containers combines technology from [Intel® Clear Containers](https://gith
 
 # Community
 
-Kata Containers is working to build a global, diverse and collaborative community. Anyone who is interested in supporting the technology is welcome to participate. We are seeking different expertise and skills, ranging from development, operations, documentation, marketing, community organization and product management.
+Kata Containers is working to build a global, diverse and collaborative community. Anyone who is interested in supporting the technology is welcome to participate. Learn how to contribute on the [Community pages](https://katacontainers.io/community/). We are seeking different expertise and skills, ranging from development, operations, documentation, marketing, community organization and product management.
 
 ## Join Us
 
@@ -38,7 +40,7 @@ You can join our community on any of the following places:
   * General discussions channel: [`#kata-general`](http://webchat.freenode.net/?channels=kata-general).
   * Development discussions channel: [`#kata-dev`](http://webchat.freenode.net/?channels=kata-dev).
 
-* Get an [invite to our Slack channel](http://bit.ly/KataSlack),
+* Get an [invite to our Slack channel](https://bit.ly/katacontainersslack),
   and then [join us on Slack](https://katacontainers.slack.com/).
 
 * Follow us on [Twitter](https://twitter.com/KataContainers) or
@@ -60,7 +62,7 @@ See the [rota documentation](Rota-Process.md).
 ## Resource Owners
 
 Details of which Kata Containers project resources are owned, managed or controlled by whom
-are detailed on the [Areas of Intetest](https://github.com/kata-containers/community/wiki/Areas-of-interest) wiki page, under the [Resource Owners](https://github.com/kata-containers/community/wiki/Areas-of-interest#resource-owners) section.
+are detailed on the [Areas of Interest](https://github.com/kata-containers/community/wiki/Areas-of-interest) wiki page, under the [Resource Owners](https://github.com/kata-containers/community/wiki/Areas-of-interest#resource-owners) section.
 
 # Governance
 
@@ -84,11 +86,11 @@ The Architecture Committee is responsible for architectural decisions, including
 
 The current Architecture Committee members are:
 
-- `Eric Ernst` ([`egernst`](https://github.com/egernst)), [Intel](https://www.intel.com/).
+- `Eric Ernst` ([`egernst`](https://github.com/egernst)), [Apple](https://apple.com/).
 - `Samuel Ortiz` ([`sameo`](https://github.com/sameo)), [Intel](https://www.intel.com).
-- `Jon Olson` ([`jon`](https://github.com/jon)), [Google](https://www.google.com).
+- `Justin He` ([`justin-he`](https://github.com/justin-he)), [ARM](https://www.arm.com).
 - `Xu Wang` ([`gnawux`](https://github.com/gnawux)), [Ant Financial](https://www.antfin.com/index.htm?locale=en_US).
-- `Zhang Wei` ([`WeiZhang555`](https://github.com/WeiZhang555)), [Huawei](http://www.huawei.com).
+- `Haomin Tsai` ([`jshachm`](https://github.com/jshachm)), [Huawei](http://www.huawei.com).
 
 Architecture Committee elections take place in September (3 seats available) and February (2 seats available). Anyone who has made contributions to the project will be eligible to run, and anyone who has had code merged into the Kata Containers project in the 12 months (a Contributor) before the election will be eligible to vote. There are no term limits, but in order to encourage diversity, no more than 2 of the 5 seats can be filled by any one organization. The Architecture Committee will meet regularly in an open forum with times and locations published in community channels.
 
@@ -100,7 +102,32 @@ See [the elections documentation](elections) for further details.
 
 See the [vendoring documentation](VENDORING.md).
 
-# Vulnerability Disclosure
+# Vulnerability Handling
+
+Vulnerabilities in Kata are handled by the
+[Vulnerability Management Team (VMT)](VMT/VMT.md).
+There are generally two phases:
+- The reporting of a vulnerability to the VMT
+- Handling and disclosure of the vulnerability by the VMT
+
+## Reporting Vulnerabilities
+
+Vulnerabilities in Kata should be reported using the
+[responsible disclosure](https://en.wikipedia.org/wiki/Responsible_disclosure) model.
+
+There are two methods available to report vulnerabilities to the Kata community:
+
+1) Report via a private issue on the [Kata Containers launchpad](https://launchpad.net/katacontainers.io)
+1) Email any member of the [Kata Containers architecture committee](#architecture-committee) directly
+
+When reporting a vulnerability via the launchpad:
+
+- You will need to create a launchpad login account.
+- Preferably, but at your discretion, create the report as "Private Security", so the VMT can assess and
+  respond in a responsible manner. Only the VMT members will be able to view a "Private Security" tagged
+  issue initially, until it is deemed OK to make it publicly visible.
+
+## Vulnerability Disclosure Process
 
 Vulnerabilities in the Kata Container project are managed by the Kata Containers
 Vulnerability Management Team (VMT). Vulnerabilities are managed using a
